@@ -15,6 +15,7 @@ export function App() {
 
   const handelSubmit = textSearch => {
     setTextSearch(textSearch);
+    
   };
 
   const toggleModal = () => {
