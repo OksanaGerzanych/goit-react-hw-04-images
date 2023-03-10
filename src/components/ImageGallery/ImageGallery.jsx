@@ -1,7 +1,7 @@
 import { fetchImage } from 'Services/Api';
 import React, { useState, useEffect } from 'react';
 import { Gallery } from './ImageGallery.styled';
-
+import PropTypes from 'prop-types';
 import { ImageGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem';
 import { Loader } from 'components/Loader/Loader';
 import { ButtonLoadMore } from 'components/Button/Button';
@@ -21,6 +21,7 @@ export function ImageGallery({ onClick, values }) {
     //   setImages([]);
     //   setPage(page);
     // }
+    console.log(values)
     
 
     setLoading(true);
@@ -59,3 +60,7 @@ export function ImageGallery({ onClick, values }) {
   );
 }
 
+ImageGallery.propTypes = {
+  onClick: PropTypes.func,
+  values: PropTypes.string,
+}
